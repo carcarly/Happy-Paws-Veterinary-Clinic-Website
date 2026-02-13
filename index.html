@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Happy Paws Veterinary Clinic - 寵樂動物診所</title>
+  <link rel="preload" href="assets/css/styles.css" as="style" onload="this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="assets/css/styles.css"></noscript>
+</head>
+<body>
+  <nav class="site-nav">
+    <div class="brand">🐾 Happy Paws <span class="brand-cn">/ 寵樂動物診所</span></div>
+    <div class="actions">
+            <a href="tel:26532287" class="book-btn-nav" data-lang="book">Book Appointment</a>
+      <div class="lang-switcher" aria-label="Language switcher">
+        <button class="lang-btn active" data-lang="en" aria-label="English">🇬🇧</button>
+        <button class="lang-btn" data-lang="zh" aria-label="Traditional Chinese">🇭🇰</button>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <h1 data-lang="hero-title">Expert Care for Cats & Dogs</h1>
+    <p class="tagline" data-lang="hero-subtitle">Medical • Surgery • Dentistry • Ultrasound • X-Ray</p>
+    <div class="hero-buttons">
+      <a href="tel:26532287" class="cta-button" data-lang="book-cta">Book Appointment</a>
+      <a href="#services" class="cta-button secondary" data-lang="learn-more">Learn More</a>
+    </div>
+      </section>
+
+  <section id="services" class="services">
+    <h2 data-lang="services-title">Our Services</h2>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon" aria-label="Surgery">🏥</div>
+        <h3 data-lang="service-1">Surgery</h3>
+        <p data-lang="service-1-desc">Spay/neuter and soft tissue procedures</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon" aria-label="Medicine">💊</div>
+        <h3 data-lang="service-2">Medicine</h3>
+        <p data-lang="service-2-desc">General health checkups and treatment</p>
+      </div>
+            <div class="service-card">
+        <div class="service-icon" aria-label="Dentistry">🦷</div>
+        <h3 data-lang="service-3">Dentistry</h3>
+        <p data-lang="service-3-desc">Professional dental cleaning and care</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon" aria-label="Ultrasound">📡</div>
+        <h3 data-lang="service-4">Ultrasound</h3>
+        <p data-lang="service-4-desc">Advanced diagnostic imaging</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon" aria-label="X-Ray">📷</div>
+        <h3 data-lang="service-5">X-Ray</h3>
+        <p data-lang="service-5-desc">Digital radiography services</p>
+      </div>
+            <div class="service-card">
+        <div class="service-icon" aria-label="Dermatology">🩺</div>
+        <h3 data-lang="service-6">Dermatology</h3>
+        <p data-lang="service-6-desc">Skin and allergy treatments</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon" aria-label="Pet Export">✈️</div>
+        <h3 data-lang="service-7">Pet Export</h3>
+        <p data-lang="service-7-desc">Complete export documentation</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon" aria-label="Hospitalisation">🏥</div>
+        <h3 data-lang="service-8">Hospitalisation</h3>
+        <p data-lang="service-8-desc">24/7 inpatient care</p>
+      </div>
+            <div class="service-card">
+        <div class="service-icon" aria-label="House Calls">🚗</div>
+        <h3 data-lang="service-9">House Calls</h3>
+        <p data-lang="service-9-desc">Home visits for your convenience</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <h2 data-lang="about-title">About Happy Paws</h2>
+    <p data-lang="about-text">
+      We provide comprehensive veterinary care for cats and dogs in Hong Kong.
+      With an extensive range of services including surgery, medicine, dentistry, ultrasound, X-ray, dermatology, pet export services, hospitalization, and house calls, we're committed to keeping your furry friends healthy and happy.
+    </p>
+  </section>
+    <section id="contact" class="contact">
+    <h2 data-lang="contact-title">Contact Us</h2>
+    <div class="contact-grid">
+      <div class="contact-card">
+        <h3>📍 Address</h3>
+        <p>Shop B, G/F, 149-155 Kwong Fuk Road<br>Tai Po, New Territories, Hong Kong<br>大埔廣福道 149-155號地下B鋪</p>
+      </div>
+      <div class="contact-card">
+        <h3>📞 Phone</h3>
+        <p><a href="tel:26532287">2653 2287</a></p>
+      </div>
+      <div class="contact-card">
+        <h3>✉️ Email</h3>
+        <p><a href="mailto:happypawsvets@gmail.com">happypawsvets@gmail.com</a></p>
+              </div>
+      <div class="contact-card">
+        <h3>🕐 Hours</h3>
+        <p>Mon - Sun: 9:30am - 6:30pm</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Happy Paws Veterinary Clinic. All rights reserved.</p>
+    <p>寵樂動物診所 版權所有</p>
+  </footer>
+
+  <script>
+    // Language toggle script (EN / ZH)
+        const translations = {
+      en: {
+        'hero-title': 'Expert Care for Cats & Dogs',
+        'hero-subtitle': 'Medical • Surgery • Dentistry • Ultrasound • X-Ray',
+        'book-cta': 'Book Appointment',
+        'learn-more': 'Learn More',
+        'services-title': 'Our Services',
+        'service-1': 'Surgery', 'service-1-desc': 'Spay/neuter and soft tissue procedures',
+        'service-2': 'Medicine', 'service-2-desc': 'General health checkups and treatment',
+        'service-3': 'Dentistry', 'service-3-desc': 'Professional dental cleaning and care',
+        'service-4': 'Ultrasound', 'service-4-desc': 'Advanced diagnostic imaging',
+        'service-5': 'X-Ray', 'service-5-desc': 'Digital radiography services',
+        'service-6': 'Dermatology', 'service-6-desc': 'Skin and allergy treatments',
+        'service-7': 'Pet Export', 'service-7-desc': 'Complete export documentation',
+        'service-8': 'Hospitalisation', 'service-8-desc': '24/7 inpatient care',
+                'service-9': 'House Calls', 'service-9-desc': 'Home visits for your convenience',
+        'about-title': 'About Happy Paws', 'about-text': 'We provide comprehensive veterinary care for cats and dogs in Hong Kong. With an extensive range of services including surgery, medicine, dentistry, ultrasound, X-ray, dermatology, pet export services, hospitalization, and house calls, we\'re committed to keeping your furry friends healthy and happy.',
+        'contact-title': 'Contact Us', 'address': 'Address', 'phone': 'Phone', 'email': 'Email',
+        'hours': 'Hours', 'hours-mon-sun': 'Monday - Sunday', 'hours-time': '9:30am - 6:30pm',
+        'hours-note': 'Open daily, including weekends and public holidays',
+        'footer-1': '© 2026 Happy Paws Veterinary Clinic. All rights reserved.',
+        'footer-2': '寵樂動物診所 版權所有', 'services': 'Services', 'about': 'About', 'contact': 'Contact', 'book': 'Book Appointment'
+      },
+      zh: {
+        'hero-title': '專業貓狗醫療服務',
+        'hero-subtitle': '醫療諮詢 • 手術 • 牙科 • 超聲波 • X光',
+        'book-cta': '立即預約', 'learn-more': '了解更多',
+        'services-title': '我們的服務',
+        'service-1': '手術', 'service-1-desc': '絕育及軟組織手術',
+        'service-2': '醫療', 'service-2-desc': '一般健康檢查及治療',
+                'service-3': '牙科', 'service-3-desc': '專業牙齒清潔及護理',
+        'service-4': '超聲波', 'service-4-desc': '先進診斷影像',
+        'service-5': 'X光', 'service-5-desc': '數碼X光服務',
+        'service-6': '皮膚科', 'service-6-desc': '皮膚及過敏治療',
+        'service-7': '寵物出口服務', 'service-7-desc': '完整出口文件',
+        'service-8': '住院', 'service-8-desc': '24小時住院護理',
+        'service-9': '上門服務', 'service-9-desc': '為您提供上門診症',
+        'about-title': '關於寵樂動物診所', 'about-text': '我們為香港的貓狗提供全面的獸醫服務。服務範圍廣泛，包括手術、醫療、牙科、超聲波、X光、皮膚科、寵物出口服務、住院及上門服務，我們致力於讓您的毛孩健康快樂。',
+        'contact-title': '聯絡我們', 'address': '地址', 'phone': '電話', 'email': '電郵',
+        'hours': '營業時間', 'hours-mon-sun': '星期一至日', 'hours-time': '上午9:30 - 下午6:30',
+        'hours-note': '每日開放，包括週末及公眾假期', 'footer-1': '© 2026 寵樂動物診所。版權所有。',
+        'footer-2': '寵樂動物診所 版權所有', 'services': '服務', 'about': '關於', 'contact': '聯絡', 'book': '預約'
+      }
+    };
+      // Init
+  const btns = document.querySelectorAll('.lang-btn');
+  const nodes = document.querySelectorAll('[data-lang]');
+  function applyLang(lang) {
+    nodes.forEach(n => {
+      const key = n.getAttribute('data-lang');
+      if (translations[lang][key]) n.textContent = translations[lang][key];
+    });
+    btns.forEach(b => b.classList.toggle('active', b.dataset.lang === lang));
+    localStorage.setItem('happypaws-lang', lang);
+  }
+  btns.forEach(b => b.addEventListener('click', () => applyLang(b.dataset.lang)));
+  // Initialize with saved or English
+  applyLang(localStorage.getItem('happypaws-lang') || 'en');
+})();
+    
