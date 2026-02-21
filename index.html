@@ -4,8 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Happy Paws Veterinary Clinic - 寵樂動物診所</title>
-  <link rel="preload" href="assets/css/styles.css" as="style" onload="this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="assets/css/styles.css"></noscript>
+  <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
   <nav class="site-nav">
@@ -173,9 +172,6 @@
   btns.forEach(b => b.addEventListener('click', () => applyLang(b.dataset.lang)));
   // Initialize with saved or English
   applyLang(localStorage.getItem('happypaws-lang') || 'en');
-})();
-    
-
-</script>
+  </script>
 </body>
 </html>
