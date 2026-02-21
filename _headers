@@ -1,21 +1,23 @@
+# Cache-busting headers for Cloudflare Pages
+
+# Force no caching for a day
 /*
-  Cache-Control: no-cache, no-store, must-revalidate
+  Cache-Control: no-cache, no-store, no-transform, must-revalidate
+  Pragma: no-cache
+  Expires: 0
 </index.html>
-  Cache-Control: no-cache, no-store, must-revalidate
-</assets/*
-  Cache-Control: no-cache, no-store, must-revalidate
-</*.js
-  Cache-Control: no-cache, no-store, must-revalidate
-</*.css
-  Cache-Control: no-cache, no-store, must-revalidate
-</*.png
-  Cache-Control: no-cache, no-store, must-revalidate
-</*.jpg
-  Cache-Control: no-cache, no-store, must-revalidate
-</*.svg
-  Cache-Control: no-cache, no-store, must-revalidate
-</*.ico
-  Cache-Control: no-cache, no-store, must-revalidate
-</*.woff
-  Cache-Control: no-cache, no-store, must-revalidate
-</*.woff2
+
+# Allow some caching for assets (shorter TTL)
+/assets/*
+  Cache-Control: public, max-age=300, must-revalidate, stale-while-revalidate=600
+</*.js>
+  Cache-Control: public, max-age=300, must-revalidate, stale-while-revalidate=600
+</*.css>
+  Cache-Control: public, max-age=300, must-revalidate, stale-while-revalidate=600
+</*.png>
+  Cache-Control: public, max-age=300, must-revalidate, stale-while-revalidate=600
+</*.jpg>
+  Cache-Control: public, max-age=300, must-revalidate, stale-while-revalidate=600
+</*.svg>
+  Cache-Control: public, max-age=300, must-revalidate, stale-while-revalidate=600
+</*.ico>
