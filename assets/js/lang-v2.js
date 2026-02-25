@@ -1,8 +1,8 @@
     // Language toggle script (EN / ZH)
         const translations = {
       en: {
-        'hero-title': 'Expert Care for Cats & Dogs',
-        'hero-subtitle': 'Medical • Surgery • Dentistry • Ultrasound • X-Ray',
+        'hero-title': 'Your Furry Pets in Good Hands',
+        'hero-subtitle': 'At Happy Paws, our professional and friendly team is dedicated to provide compassionate care for your beloved cats and dogs.',
         'book-cta': 'Book Appointment',
         'learn-more': 'Learn More',
         'services-title': 'Our Services',
@@ -19,12 +19,15 @@
         'contact-title': 'Contact Us', 'address': 'Address', 'phone': 'Phone', 'email': 'Email',
         'hours': 'Hours', 'hours-mon-sun': 'Monday - Sunday', 'hours-time': '9:30am - 6:30pm',
         'hours-note': 'Open daily, including weekends and public holidays',
+        'addr-en': 'Shop B, G/F, 149-155 Kwong Fuk Road, Tai Po, New Territories, Hong Kong', 'addr-zh': '大埔廣福道 149-155號地下B鋪',
+        'hours-text': 'Mon - Sun: 9:30am - 6:30pm',
         'footer-1': '© 2026 Happy Paws Veterinary Clinic. All rights reserved.',
         'footer-2': '寵樂動物診所 版權所有', 'services': 'Services', 'about': 'About', 'contact': 'Contact', 'book': 'Book Appointment'
       },
       zh: {
-        'hero-title': '專業貓狗醫療服務',
-        'hero-subtitle': '醫療諮詢 • 手術 • 牙科 • 超聲波 • X光',
+        'hero-title': '您的毛孩健康，是我們的首要任務',
+        'hero-subtitle': '寵樂專業友善的團隊致力為您心愛的貓狗提供貼心服務。從驗牙到手術，我們視每位毛孩如己出。',
+        'hero-subtitle-2': '從定期檢查到專科治療，我們將每位毛孩視如己出。',
         'book-cta': '立即預約', 'learn-more': '了解更多',
         'services-title': '我們的服務',
         'service-1': '手術', 'service-1-desc': '絕育及軟組織手術',
@@ -39,7 +42,8 @@
         'about-title': '關於寵樂動物診所', 'about-text': '我們為香港的貓狗提供全面的獸醫服務。服務範圍廣泛，包括手術、醫療、牙科、超聲波、X光、皮膚科、寵物出口服務、住院及上門服務，我們致力於讓您的毛孩健康快樂。',
         'contact-title': '聯絡我們', 'address': '地址', 'phone': '電話', 'email': '電郵',
         'hours': '營業時間', 'hours-mon-sun': '星期一至日', 'hours-time': '上午9:30 - 下午6:30',
-        'hours-note': '每日開放，包括週末及公眾假期', 'footer-1': '© 2026 寵樂動物診所。版權所有。',
+        'hours-note': '每日開放，包括週末及公眾假期', 'addr-en': 'Shop B, G/F, 149-155 Kwong Fuk Road, Tai Po, New Territories, Hong Kong', 'addr-zh': '大埔廣福道 149-155號地下B鋪',
+        'hours-text': '星期一至日：上午9:30 - 下午6:30', 'footer-1': '© 2026 寵樂動物診所。版權所有。',
         'footer-2': '寵樂動物診所 版權所有', 'services': '服務', 'about': '關於', 'contact': '聯絡', 'book': '預約'
       }
     };
@@ -51,9 +55,12 @@
       const key = n.getAttribute('data-lang');
       if (translations[lang][key]) n.textContent = translations[lang][key];
     });
+    // Handle address visibility
+    document.querySelectorAll('[data-lang="addr-en"]').forEach(n => n.style.display = lang === 'en' ? 'inline' : 'none');
+    document.querySelectorAll('[data-lang="addr-zh"]').forEach(n => n.style.display = lang === 'zh' ? 'inline' : 'none');
     btns.forEach(b => b.classList.toggle('active', b.dataset.lang === lang));
     localStorage.setItem('happypaws-lang', lang);
   }
   btns.forEach(b => b.addEventListener('click', () => applyLang(b.dataset.lang)));
   // Initialize with saved or English
-  applyLang(localStorage.getItem('happypaws-lang') || 'en');
+  applyLang('en');
